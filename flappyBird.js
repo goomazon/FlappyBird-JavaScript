@@ -32,9 +32,11 @@ var score = 0;
 
 var fly = new Audio();
 var scor = new Audio();
+var sheesh = new Audio()
 
 fly.src = "sounds/fly.mp3";
 scor.src = "sounds/score.mp3";
+sheesh.src = "sounds/sheesh.mp3";
 
 // on key down
 
@@ -42,7 +44,7 @@ document.addEventListener("keydown",moveUp);
 
 function moveUp(){
     bY -= 25;
-    fly.play();
+    sheesh.play();
 }
 
 // pipe coordinates
