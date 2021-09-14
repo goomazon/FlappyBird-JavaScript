@@ -38,7 +38,7 @@ var endcollision = new Audio();
 // fly.src = "sounds/fly.mp3";
 scor.src = "sounds/score.mp3";
 sheesh.src = "sounds/sheesh.mp3";
-endcollision.src = "sounds/endcollision.mp3"
+endcollision.src = "sounds/endcollision.mp3";
 
 // on key down
 
