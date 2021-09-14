@@ -45,7 +45,7 @@ endcollision.src = "sounds/endcollision.mp3"
 document.addEventListener("keydown",moveUp);
 
 function moveUp(){
-    bY -= 25;
+    bY -= 35;
     sheesh.play();
 }
 
