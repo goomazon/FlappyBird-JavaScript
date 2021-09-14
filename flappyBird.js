@@ -43,7 +43,7 @@ sheesh.src = "sounds/sheesh.mp3";
 document.addEventListener("keydown",moveUp);
 
 function moveUp(){
-    bY -= 40;
+    bY -= 35;
     sheesh.play();
 }
 
