@@ -30,13 +30,15 @@ var score = 0;
 
 // audio files
 
-var fly = new Audio();
+// var fly = new Audio();
 var scor = new Audio();
-var sheesh = new Audio()
+var sheesh = new Audio();
+var endcollision = new Audio();
 
-fly.src = "sounds/fly.mp3";
+// fly.src = "sounds/fly.mp3";
 scor.src = "sounds/score.mp3";
 sheesh.src = "sounds/sheesh.mp3";
+endcollision.src = "sounds/endcollision.mp3"
 
 // on key down
 
@@ -81,6 +83,7 @@ function draw(){
         // detect collision
         
         if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY+bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height){
+            endcollision.play();
             location.reload(); // reload the page
         }
         
