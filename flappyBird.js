@@ -43,10 +43,15 @@ endcollision.src = "sounds/endcollision.mp3";
 // on key down
 
 document.addEventListener("keydown",moveUp);
+endcollision.addEventListener('ended', reloadGame);
 
 function moveUp(){
     bY -= 35;
     sheesh.play();
+}
+
+function reloadGame() {
+    location.reload();
 }
 
 // pipe coordinates
@@ -83,7 +88,8 @@ function draw(){
         // detect collision
         
         if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width && (bY <= pipe[i].y + pipeNorth.height || bY+bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height){
-            location.reload(); // reload the page
+            // location.reload(); // reload the page
+            endcollision.play()
         }
         
         if(pipe[i].x == 5){
